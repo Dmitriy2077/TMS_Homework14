@@ -1,11 +1,27 @@
 <resources>
     <string name="app_name">Lesson14</string>
+
     <string name="btn_app_text">App1</string>
+
     <string name="text_input_info">Enter message:</string>
     <string name="text_output_info">Formatted message:</string>
     <string name="text_input_hide">Type here . . .</string>
     <string name="text_btn">Format</string>
+
     <string name="btn_app_magicBall">App2</string>
+
+    <string name="magicBall_btn">Get Answer</string>
+    <string name="magicBall_infoQ">Enter question:</string>
+    <string name="magicBall_infoA">Answer -></string>
+    <string name="magicBall_hintQ">Ask me . . .</string>
+    <string name="magicBallA_1st">Yes</string>
+    <string name="magicBallA_2nd">No</string>
+    <string name="magicBallA_3rd">Probably yes</string>
+    <string name="magicBallA_4th">Probably not</string>
+    <string name="magicBallA_5th">Maybe</string>
+    <string name="magicBallA_6th">There are prospects</string>
+    <string name="magicBallA_7th">The question is incorrectly asked</string>
+
     <string name="btn_app_riddles">App3</string>
     <string name="btn_app_calculator">App4</string>
 </resources>
