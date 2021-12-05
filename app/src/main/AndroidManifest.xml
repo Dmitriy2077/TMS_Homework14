@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lesson14">
         <activity
+            android:name=".modules.CalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modules.RiddlesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modules.MagicBallActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modules.TextActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

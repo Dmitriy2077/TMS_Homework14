@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Lesson14</string>
+    <string name="btn_app_text">App1</string>
+    <string name="text_input_info">Enter message:</string>
+    <string name="text_output_info">Formatted message:</string>
+    <string name="text_input_hide">Type here . . .</string>
+    <string name="text_btn">Format</string>
+    <string name="btn_app_magicBall">App2</string>
+    <string name="btn_app_riddles">App3</string>
+    <string name="btn_app_calculator">App4</string>
 </resources>
