@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.lubinskiy.lesson14.modules.CalculatorActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun onClickCalculator(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
+    fun onClickCalculator(view: View?) {
+        val intent = Intent(this, CalculatorActivity::class.java)
         startActivity(intent)
     }
 }
