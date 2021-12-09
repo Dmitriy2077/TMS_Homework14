@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Lesson14</string>
+    <string name="empty_string" />
 
     <string name="btn_app_text">App1</string>
 
@@ -23,5 +24,19 @@
     <string name="magicBallA_7th">The question is incorrectly asked</string>
 
     <string name="btn_app_riddles">App3</string>
+
+    <string name="riddles_answer_true">You WIN))</string>
+    <string name="riddles_answer_false">You LOSE((</string>
+    <string name="riddles_btn_start">Start</string>
+    <string name="riddles_btn_restart">Restart</string>
+    <string name="riddle_first_Q">What is always in front of you but can’t be seen?</string>
+    <string name="riddle_first_A">The future</string>
+    <string name="riddle_second_Q">What can you break, even if you never pick it up or touch it?</string>
+    <string name="riddle_second_A">A promise</string>
+    <string name="riddle_third_Q">What can you keep after giving to someone?</string>
+    <string name="riddle_third_A">Your word</string>
+    <string name="riddle_fourth_Q">What can’t talk but will reply when spoken to?</string>
+    <string name="riddle_fourth_A">An echo</string>
+
     <string name="btn_app_calculator">App4</string>
 </resources>

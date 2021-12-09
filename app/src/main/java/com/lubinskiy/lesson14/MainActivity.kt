@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.lubinskiy.lesson14.modules.TextActivity
 import com.lubinskiy.lesson14.modules.MagicBallActivity
+import com.lubinskiy.lesson14.modules.RiddlesActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickRiddles(view: View?) {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, RiddlesActivity::class.java)
         startActivity(intent)
     }
 
