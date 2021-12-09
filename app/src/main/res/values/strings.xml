@@ -39,4 +39,16 @@
     <string name="riddle_fourth_A">An echo</string>
 
     <string name="btn_app_calculator">App4</string>
+
+    <string name="calc_first_hint">Number 1</string>
+    <string name="calc_second_hint">Number 2</string>
+    <string name="calc_btn_add">+</string>
+    <string name="calc_btn_subtract">-</string>
+    <string name="calc_btn_multiply">*</string>
+    <string name="calc_btn_divide">/</string>
+    <string name="calc_btn_clear">clear</string>
+    <string name="calc_btn_result">result</string>
+    <string name="calc_info_result">0</string>
+    <string name="calc_info_error">ERROR</string>
+    <string name="calc_info_empty">You should enter the number first!!!</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.View
 import com.lubinskiy.lesson14.modules.TextActivity
 import com.lubinskiy.lesson14.modules.MagicBallActivity
 import com.lubinskiy.lesson14.modules.RiddlesActivity
+import com.lubinskiy.lesson14.modules.CalculatorActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickCalculator(view: View?) {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, CalculatorActivity::class.java)
         startActivity(intent)
     }
 }
