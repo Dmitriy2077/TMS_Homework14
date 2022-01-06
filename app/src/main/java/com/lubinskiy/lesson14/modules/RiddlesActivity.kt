@@ -8,15 +8,15 @@ import android.widget.TextView
 import com.lubinskiy.lesson14.R
 
 class RiddlesActivity : AppCompatActivity() {
-    private var riddleQuestion: TextView? = null
-    private var riddleAnswer: TextView? = null
-    private var startBtn: Button? = null
-    private var answerBtnLT: Button? = null
-    private var answerBtnRT: Button? = null
-    private var answerBtnLB: Button? = null
-    private var answerBtnRB: Button? = null
-    private var answerBtn: List<Button?>? = null
-    private var riddles: List<Riddle>? = null
+    private lateinit var riddleQuestion: TextView
+    private lateinit var riddleAnswer: TextView
+    private lateinit var startBtn: Button
+    private lateinit var answerBtnLT: Button
+    private lateinit var answerBtnRT: Button
+    private lateinit var answerBtnLB: Button
+    private lateinit var answerBtnRB: Button
+    private lateinit var answerBtn: List<Button?>
+    private lateinit var riddles: List<Riddle>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,69 +42,50 @@ class RiddlesActivity : AppCompatActivity() {
     }
 
     fun onClickStart(view: View?) {
-        val sequence = riddles?.let {
+        val sequence = riddles.let {
             listOf(0, 1, 2, 3).asSequence().shuffled().take(it.size).toList()
         }
 
-        riddleQuestion!!.text = riddles!!.random().question
+        riddleQuestion.text = riddles.random().question
 
         var counter = 0
-        answerBtn!!.forEach {
-            it!!.text = riddles!![sequence!![counter]].answer
-            it.visibility = Button.VISIBLE
+        answerBtn.forEach {
+            it?.text = riddles[sequence[counter]].answer
+            it?.visibility = Button.VISIBLE
             counter++
         }
         counter = 0
 
-        startBtn!!.text = getString(R.string.riddles_btn_restart)
-        riddleAnswer!!.text = getString(R.string.empty_string)
+        startBtn.text = getString(R.string.riddles_btn_restart)
+        riddleAnswer.text = getString(R.string.empty_string)
     }
 
     fun onClickAnswer(view: View?) {
         when (view!!.id) {
-            answerBtnLT!!.id -> buttonController(answerBtnLT)
-            answerBtnLB!!.id -> buttonController(answerBtnLB)
-            answerBtnRT!!.id -> buttonController(answerBtnRT)
-            answerBtnRB!!.id -> buttonController(answerBtnRB)
+            answerBtnLT.id -> buttonController(answerBtnLT)
+            answerBtnLB.id -> buttonController(answerBtnLB)
+            answerBtnRT.id -> buttonController(answerBtnRT)
+            answerBtnRB.id -> buttonController(answerBtnRB)
         }
     }
 
     private fun buttonController(button: Button?) {
-        riddles!!.forEach {
-            if (it.answer == button!!.text &&
-                it.question == riddleQuestion!!.text
+        riddles.forEach {
+            if (it.answer == button?.text &&
+                it.question == riddleQuestion.text
             ) {
-                riddleAnswer!!.text = getString(R.string.riddles_answer_true)
-                buttonVisibility(button)
+                riddleAnswer.text = getString(R.string.riddles_answer_true)
+                buttonVisibility(button.id)
                 return
             }
         }
-        buttonVisibility(button)
-        riddleAnswer!!.text = getString(R.string.riddles_answer_false)
+        buttonVisibility(button!!.id)
+        riddleAnswer.text = getString(R.string.riddles_answer_false)
     }
 
-    private fun buttonVisibility(button: Button?) {
-        when (button) {
-            answerBtnLT -> {
-                answerBtn!!.forEach {
-                    it!!.visibility = if (it == answerBtnLT) Button.VISIBLE else Button.INVISIBLE
-                }
-            }
-            answerBtnLB -> {
-                answerBtn!!.forEach {
-                    it!!.visibility = if (it == answerBtnLB) Button.VISIBLE else Button.INVISIBLE
-                }
-            }
-            answerBtnRT -> {
-                answerBtn!!.forEach {
-                    it!!.visibility = if (it == answerBtnRT) Button.VISIBLE else Button.INVISIBLE
-                }
-            }
-            answerBtnRB -> {
-                answerBtn!!.forEach {
-                    it!!.visibility = if (it == answerBtnRB) Button.VISIBLE else Button.INVISIBLE
-                }
-            }
+    private fun buttonVisibility(buttonId: Int) {
+        answerBtn.forEachIndexed {
+            index, v -> v?.visibility = if (v?.id == buttonId) Button.VISIBLE else Button.INVISIBLE
         }
     }
 }

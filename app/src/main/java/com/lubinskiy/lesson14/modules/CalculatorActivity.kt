@@ -9,12 +9,11 @@ import android.widget.TextView
 import com.lubinskiy.lesson14.R
 
 class CalculatorActivity : AppCompatActivity() {
-    private var firstNumber: EditText? = null
-    private var secondNumber: EditText? = null
-    private var expressionResult: TextView? = null
-    private var operatorButton: List<Button?>? = null
+    private lateinit var firstNumber: EditText
+    private lateinit var secondNumber: EditText
+    private lateinit var expressionResult: TextView
+    private lateinit var operatorButton: List<Button>
     private var operand: Number? = null
-    private var clearButton: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +25,6 @@ class CalculatorActivity : AppCompatActivity() {
         firstNumber = findViewById(R.id.editTextFirstNumber)
         secondNumber = findViewById(R.id.editTextSecondNumber)
         expressionResult = findViewById(R.id.textViewResult)
-        clearButton = findViewById(R.id.buttonClear)
         operatorButton = listOf(
             findViewById(R.id.buttonAdd),
             findViewById(R.id.buttonSubtract),
@@ -36,27 +34,27 @@ class CalculatorActivity : AppCompatActivity() {
     }
 
     fun onClickOperator(view: View?) {
-        if (firstNumber!!.text.isNotEmpty() && secondNumber!!.text.isNotEmpty()) {
+        if (firstNumber.text.isNotEmpty() && secondNumber.text.isNotEmpty()) {
             operand = Number(
-                firstNumber!!.text.toString().toFloat(),
-                secondNumber!!.text.toString().toFloat()
+                firstNumber.text.toString().toFloat(),
+                secondNumber.text.toString().toFloat()
             )
 
-            expressionResult!!.text = when (view!!.id) {
-                operatorButton!![0]?.id -> operand!!.add()
-                operatorButton!![1]?.id -> operand!!.subtract()
-                operatorButton!![2]?.id -> operand!!.multiply()
-                operatorButton!![3]?.id -> operand!!.divide()
+            expressionResult.text = when (view!!.id) {
+                operatorButton[0].id -> operand!!.add()
+                operatorButton[1].id -> operand!!.subtract()
+                operatorButton[2].id -> operand!!.multiply()
+                operatorButton[3].id -> operand!!.divide()
                 else -> getString(R.string.calc_info_error)
             }
         } else {
-            expressionResult!!.text = getString(R.string.calc_info_empty)
+            expressionResult.text = getString(R.string.calc_info_empty)
         }
     }
 
     fun onClickClear(view: View?) {
-        firstNumber!!.text.clear()
-        secondNumber!!.text.clear()
-        expressionResult!!.text = getString(R.string.calc_info_result)
+        firstNumber.text.clear()
+        secondNumber.text.clear()
+        expressionResult.text = getString(R.string.calc_info_result)
     }
 }

@@ -9,8 +9,8 @@ import android.view.View
 import com.lubinskiy.lesson14.R
 
 class TextActivity : AppCompatActivity() {
-    var textInput: EditText? = null
-    var textOutput: TextView? = null
+    private lateinit var textInput: EditText
+    private lateinit var textOutput: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,7 @@ class TextActivity : AppCompatActivity() {
     }
 
     fun onClick(view: View?) {
-        textOutput!!.text = textInput!!.text.toString()
+        textOutput.text = textInput.text.toString()
             .replace('a', 'o')
             .replace('A', 'O')
             .replace('А', 'О')

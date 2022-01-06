@@ -8,9 +8,9 @@ import android.widget.TextView
 import com.lubinskiy.lesson14.R
 
 class MagicBallActivity : AppCompatActivity() {
-    var magicQuestion: EditText? = null
-    var magicAnswer: TextView? = null
-    var answer = listOf(
+    private var magicQuestion: EditText? = null
+    private lateinit var magicAnswer: TextView
+    private var answer = listOf(
         R.string.magicBallA_1st,
         R.string.magicBallA_2nd,
         R.string.magicBallA_3rd,
@@ -32,20 +32,8 @@ class MagicBallActivity : AppCompatActivity() {
     }
 
     fun onClick(view: View?) {
-        val randomAnswer = (1..6).random()
-        magicAnswer!!.text =
-            if (magicQuestion!!.text.isNotEmpty()) findAnswer(randomAnswer) else getString(answer[6])
-    }
-
-    private fun findAnswer(i: Int): String {
-        val message = when (i) {
-            1 -> getString(answer[0])
-            2 -> getString(answer[1])
-            3 -> getString(answer[2])
-            4 -> getString(answer[3])
-            5 -> getString(answer[4])
-            else -> getString(answer[5])
-        }
-        return message
+        val randomAnswer = (answer.indices - 6).random()
+        magicAnswer.text =
+            if (magicQuestion!!.text.isNotEmpty()) getString(answer[randomAnswer]) else getString(answer[6])
     }
 }
