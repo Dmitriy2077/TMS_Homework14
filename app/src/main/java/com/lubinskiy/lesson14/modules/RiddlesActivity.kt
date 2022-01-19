@@ -42,9 +42,7 @@ class RiddlesActivity : AppCompatActivity() {
     }
 
     fun onClickStart(view: View?) {
-        val sequence = riddles.let {
-            listOf(0, 1, 2, 3).asSequence().shuffled().take(it.size).toList()
-        }
+        val sequence = riddles.indices.shuffled().take(riddles.size).toList()
 
         riddleQuestion.text = riddles.random().question
 
@@ -58,6 +56,7 @@ class RiddlesActivity : AppCompatActivity() {
 
         startBtn.text = getString(R.string.riddles_btn_restart)
         riddleAnswer.text = getString(R.string.empty_string)
+        startBtn.visibility = Button.INVISIBLE
     }
 
     fun onClickAnswer(view: View?) {
@@ -67,6 +66,7 @@ class RiddlesActivity : AppCompatActivity() {
             answerBtnRT.id -> buttonController(answerBtnRT)
             answerBtnRB.id -> buttonController(answerBtnRB)
         }
+        startBtn.visibility = Button.VISIBLE
     }
 
     private fun buttonController(button: Button?) {
@@ -84,8 +84,8 @@ class RiddlesActivity : AppCompatActivity() {
     }
 
     private fun buttonVisibility(buttonId: Int) {
-        answerBtn.forEachIndexed {
-            index, v -> v?.visibility = if (v?.id == buttonId) Button.VISIBLE else Button.INVISIBLE
+        answerBtn.forEachIndexed { _, v ->
+            v?.visibility = if (v?.id == buttonId) Button.VISIBLE else Button.INVISIBLE
         }
     }
 }

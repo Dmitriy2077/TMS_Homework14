@@ -16,8 +16,7 @@ class MagicBallActivity : AppCompatActivity() {
         R.string.magicBallA_3rd,
         R.string.magicBallA_4th,
         R.string.magicBallA_5th,
-        R.string.magicBallA_6th,
-        R.string.magicBallA_7th
+        R.string.magicBallA_6th
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +31,8 @@ class MagicBallActivity : AppCompatActivity() {
     }
 
     fun onClick(view: View?) {
-        val randomAnswer = (answer.indices - 6).random()
+        val randomAnswer = answer.indices.random()
         magicAnswer.text =
-            if (magicQuestion!!.text.isNotEmpty()) getString(answer[randomAnswer]) else getString(answer[6])
+            if (magicQuestion!!.text.isNotEmpty()) getString(answer[randomAnswer]) else getString(R.string.magicBallA_7th)
     }
 }

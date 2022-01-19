@@ -50,5 +50,8 @@
     <string name="calc_btn_result">result</string>
     <string name="calc_info_result">0</string>
     <string name="calc_info_error">ERROR</string>
-    <string name="calc_info_empty">You should enter the number first!!!</string>
+    <string name="calc_info_empty_number">Empty field. Please, enter the number!!!</string>
+    <string name="calc_info_not_a_digit">You should enter only Integer numbers!!!</string>
+    <string name="calc_info_minus">Minus Error!!!</string>
+    <string name="calc_info_numbers">OK</string>
 </resources>
