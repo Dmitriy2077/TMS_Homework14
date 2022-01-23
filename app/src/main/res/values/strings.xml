@@ -1,11 +1,57 @@
 <resources>
     <string name="app_name">Lesson14</string>
+    <string name="empty_string" />
+
     <string name="btn_app_text">App1</string>
+
     <string name="text_input_info">Enter message:</string>
     <string name="text_output_info">Formatted message:</string>
     <string name="text_input_hide">Type here . . .</string>
     <string name="text_btn">Format</string>
+
     <string name="btn_app_magicBall">App2</string>
+
+    <string name="magicBall_btn">Get Answer</string>
+    <string name="magicBall_infoQ">Enter question:</string>
+    <string name="magicBall_infoA">Answer -></string>
+    <string name="magicBall_hintQ">Ask me . . .</string>
+    <string name="magicBallA_1st">Yes</string>
+    <string name="magicBallA_2nd">No</string>
+    <string name="magicBallA_3rd">Probably yes</string>
+    <string name="magicBallA_4th">Probably not</string>
+    <string name="magicBallA_5th">Maybe</string>
+    <string name="magicBallA_6th">There are prospects</string>
+    <string name="magicBallA_7th">The question is incorrectly asked</string>
+
     <string name="btn_app_riddles">App3</string>
+
+    <string name="riddles_answer_true">You WIN))</string>
+    <string name="riddles_answer_false">You LOSE((</string>
+    <string name="riddles_btn_start">Start</string>
+    <string name="riddles_btn_restart">Restart</string>
+    <string name="riddle_first_Q">What is always in front of you but can’t be seen?</string>
+    <string name="riddle_first_A">The future</string>
+    <string name="riddle_second_Q">What can you break, even if you never pick it up or touch it?</string>
+    <string name="riddle_second_A">A promise</string>
+    <string name="riddle_third_Q">What can you keep after giving to someone?</string>
+    <string name="riddle_third_A">Your word</string>
+    <string name="riddle_fourth_Q">What can’t talk but will reply when spoken to?</string>
+    <string name="riddle_fourth_A">An echo</string>
+
     <string name="btn_app_calculator">App4</string>
+
+    <string name="calc_first_hint">Number 1</string>
+    <string name="calc_second_hint">Number 2</string>
+    <string name="calc_btn_add">+</string>
+    <string name="calc_btn_subtract">-</string>
+    <string name="calc_btn_multiply">*</string>
+    <string name="calc_btn_divide">/</string>
+    <string name="calc_btn_clear">clear</string>
+    <string name="calc_btn_result">result</string>
+    <string name="calc_info_result">0</string>
+    <string name="calc_info_error">ERROR</string>
+    <string name="calc_info_empty_number">Empty field. Please, enter the number!!!</string>
+    <string name="calc_info_not_a_digit">You should enter only Integer numbers!!!</string>
+    <string name="calc_info_minus">Minus Error!!!</string>
+    <string name="calc_info_numbers">OK</string>
 </resources>
